@@ -57,9 +57,9 @@ func _server_disconnected():
 func create_player(peerId):
 	var spawn
 	if(peerId == 1):
-		spawn = levelInstance.get_node("P1_Spawn")
+		spawn = levelInstance.get_node("RedSpawn")
 	else:
-		spawn = levelInstance.get_node("P2_Spawn")
+		spawn = levelInstance.get_node("BlueSpawn")
 
 	var newPlayer = playerScene.instance();
 	newPlayer.set_network_master(peerId)

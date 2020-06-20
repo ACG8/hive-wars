@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://menus/blue_ladybug.png" type="Texture" id=1]
+[ext_resource path="res://menus/red_ladybug.png" type="Texture" id=2]
+[ext_resource path="res://menus/TeamMenu.gd" type="Script" id=3]
+[ext_resource path="res://menus/CharacterSelectionMenu.tscn" type="PackedScene" id=4]
+
+[node name="Control" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+character_menu = ExtResource( 4 )
+
+[node name="Blue" type="Button" parent="."]
+margin_left = 100.238
+margin_top = 168.973
+margin_right = 368.238
+margin_bottom = 430.973
+icon = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Players" type="Label" parent="Blue"]
+margin_left = 110.262
+margin_top = 278.234
+margin_right = 150.262
+margin_bottom = 293.234
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Red" type="Button" parent="."]
+margin_left = 650.115
+margin_top = 170.404
+margin_right = 918.115
+margin_bottom = 432.404
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Players" type="Label" parent="Red"]
+margin_left = 122.959
+margin_top = 274.559
+margin_right = 162.959
+margin_bottom = 289.559
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

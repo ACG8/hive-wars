@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://bugs/spider/spider.png" type="Texture" id=1]
+[ext_resource path="res://bugs/bee/bee.png" type="Texture" id=2]
+[ext_resource path="res://menus/CharacterSelectionMenu.gd" type="Script" id=3]
+
+[node name="Menu" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bee" type="Button" parent="."]
+margin_left = 336.652
+margin_top = 274.535
+margin_right = 412.652
+margin_bottom = 344.535
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spider" type="Button" parent="."]
+margin_left = 621.712
+margin_top = 275.589
+margin_right = 697.712
+margin_bottom = 345.589
+icon = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

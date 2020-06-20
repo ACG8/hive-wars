@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/barb.png-22d2b549226ebed4b0c303547bcf4606.stex"
+path="res://.import/red_ladybug.png-174c34de07d1b2bf32ecb375623690cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://barb.png"
-dest_files=[ "res://.import/barb.png-22d2b549226ebed4b0c303547bcf4606.stex" ]
+source_file="res://menus/red_ladybug.png"
+dest_files=[ "res://.import/red_ladybug.png-174c34de07d1b2bf32ecb375623690cb.stex" ]
 
 [params]
 

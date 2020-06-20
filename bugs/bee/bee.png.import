@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bee.png-a64c68cb0a8ad43d8e891abe1232395f.stex"
+path="res://.import/bee.png-0928c8d837fbb4e9a8856c5bfba1e619.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bee.png"
-dest_files=[ "res://.import/bee.png-a64c68cb0a8ad43d8e891abe1232395f.stex" ]
+source_file="res://bugs/bee/bee.png"
+dest_files=[ "res://.import/bee.png-0928c8d837fbb4e9a8856c5bfba1e619.stex" ]
 
 [params]
 
