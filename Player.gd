@@ -1,5 +1,7 @@
 extends Node
 
+var spawn_position
+
 func _ready():
 	pass
 

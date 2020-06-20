@@ -79,20 +79,23 @@ func synchronize():
 func die():
 	self.visible = false
 
-remotesync func damage(amount):
-	current_health -= amount
+func damage(amount):
+	if is_network_master():
+		rpc("change_health", current_health - amount)
+
+remotesync func change_health(new_health):
+	current_health = new_health
 	if current_health <= 0:
-		emit_signal("died")
+#		emit_signal("died")
+		respawn()
 	else:
 		emit_signal("health_changed", max_health, current_health)
 
 func respawn():
-	var spawn
-	if self.get_network_master() == 1:
-		spawn = get_parent().get_parent().get_node("BlueSpawn")
-	else:
-		spawn = get_parent().get_node("RedSpawn")
+	var respawn_bug = load("res://bugs/larva/Larva.tscn").instance()
+	respawn_bug.position = get_parent().spawn_position
+	respawn_bug.rotation = rotation
+	respawn_bug.set_network_master(get_network_master())
+	get_parent().add_child(respawn_bug)
+	queue_free()
 
-	self.position = spawn.position
-	self.rotation = spawn.rotation
-	self.current_health = max_health

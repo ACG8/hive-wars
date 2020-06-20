@@ -66,6 +66,7 @@ func create_player(peerId):
 	new_player.name = String(peerId)
 	new_player.get_node("Bug").position = spawn.position
 	new_player.get_node("Bug").rotation = spawn.rotation
+	new_player.spawn_position = spawn.position
 	levelInstance.add_child(new_player)
 
 func destroy_player(peerId):
