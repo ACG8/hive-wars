@@ -3,7 +3,9 @@
 [ext_resource path="res://menus/blue_ladybug.png" type="Texture" id=1]
 [ext_resource path="res://menus/red_ladybug.png" type="Texture" id=2]
 [ext_resource path="res://menus/TeamMenu.gd" type="Script" id=3]
-[ext_resource path="res://menus/CharacterSelectionMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://bugs/larva/BugSelectionMenu.tscn" type="PackedScene" id=4]
+
+
 
 [node name="Control" type="Panel"]
 anchor_right = 1.0

@@ -1,20 +1,18 @@
-extends Panel
+extends CanvasLayer
 
 onready var Bee = get_node("Bee")
 onready var Spider = get_node("Spider")
 
 export (Array, PackedScene) var bugs = []
 
+signal bug_selected(bug_index)
+
 func _ready():
 	Bee.connect("button_down", self, "select_bee")
 	Spider.connect("button_down", self, "select_spider")
 
 func select_bee():
-	NetworkSingleton.player_character = 0
-	get_tree().change_scene_to(NetworkSingleton.level_packed_scene)
+	emit_signal("bug_selected", 0)
 
 func select_spider():
-	NetworkSingleton.player_character = 1
-	get_tree().change_scene_to(NetworkSingleton.level_packed_scene)
-
-
+	emit_signal("bug_selected", 1)
