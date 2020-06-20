@@ -4,6 +4,8 @@ export var speed = 100
 export var max_health = 10
 onready var current_health = max_health
 
+export (PackedScene) var camera
+
 signal health_changed(max_health, current_health)
 signal died
 
@@ -18,6 +20,7 @@ func _ready():
 	emit_signal("health_changed", max_health, current_health)
 
 	if is_network_master():
+		add_child(camera.instance())
 		set_process_input(true)
 	else:
 		set_process_input(false)
@@ -64,11 +67,6 @@ func _physics_process(delta):
 	var direction = Vector2(x_axis * delta * speed, y_axis * delta * speed)
 
 	self.move_and_slide(direction * speed)
-
-	if self.position.x < 0 : self.position.x = 1000
-	if self.position.x > 1024: self.position.x = 0
-	if self.position.y < 0: self.position.y = 600
-	if self.position.y > 600: self.position.y = 0
 
 	if is_network_master():
 		synchronize()

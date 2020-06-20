@@ -61,12 +61,12 @@ func create_player(peerId):
 	else:
 		spawn = levelInstance.get_node("BlueSpawn")
 
-	var newPlayer = playerScene.instance();
-	newPlayer.set_network_master(peerId)
-	newPlayer.name = String(peerId)
-	newPlayer.get_node("Bug").position = spawn.position
-	newPlayer.get_node("Bug").rotation = spawn.rotation
-	levelInstance.add_child(newPlayer)
+	var new_player = playerScene.instance();
+	new_player.set_network_master(peerId)
+	new_player.name = String(peerId)
+	new_player.get_node("Bug").position = spawn.position
+	new_player.get_node("Bug").rotation = spawn.rotation
+	levelInstance.add_child(new_player)
 
 func destroy_player(peerId):
 	levelInstance.remove_node(levelInstance.get_node(String(peerId)))
