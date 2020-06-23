@@ -1,13 +1,44 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Level.gd" type="Script" id=1]
+[ext_resource path="res://grass_texture.png" type="Texture" id=2]
+[ext_resource path="res://Boulder.tscn" type="PackedScene" id=3]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="BlueSpawn" type="Node2D" parent="."]
-position = Vector2( 245.859, 290.299 )
+position = Vector2( 1222.01, 353.503 )
 rotation = 3.14159
 
 [node name="RedSpawn" type="Node2D" parent="."]
-position = Vector2( 845.677, 289.05 )
+position = Vector2( -418.403, 338.209 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 330.51, 379.368 )
+scale = Vector2( 5.3559, 5.3559 )
+texture = ExtResource( 2 )
+
+[node name="Boulder" parent="Sprite" instance=ExtResource( 3 )]
+position = Vector2( -290.074, -237.587 )
+
+[node name="Boulder2" parent="Sprite" instance=ExtResource( 3 )]
+position = Vector2( -13.0929, -346.148 )
+
+[node name="Boulder3" parent="Sprite" instance=ExtResource( 3 )]
+position = Vector2( 301.428, -252.806 )
+
+[node name="Boulder4" parent="Sprite" instance=ExtResource( 3 )]
+position = Vector2( 441.44, -12.3502 )
+
+[node name="Boulder5" parent="Sprite" instance=ExtResource( 3 )]
+position = Vector2( 251.713, 263.616 )
+
+[node name="Boulder6" parent="Sprite" instance=ExtResource( 3 )]
+position = Vector2( 55.8987, 301.156 )
+
+[node name="Boulder7" parent="Sprite" instance=ExtResource( 3 )]
+position = Vector2( -225.141, 279.85 )
+
+[node name="Boulder8" parent="Sprite" instance=ExtResource( 3 )]
+position = Vector2( -408.78, 91.1372 )
